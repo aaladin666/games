@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aladin Game World</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Trebuchet MS', sans-serif;
+}
+body{
+    background:linear-gradient(#87CEEB,#b6f2ff);
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* Floating Clouds */
+.cloud{
+    position:absolute;
+    background:white;
+    border-radius:50px;
+    opacity:0.8;
+    animation:float 40s linear infinite;
+}
+.cloud::before,.cloud::after{
+    content:'';
+    position:absolute;
+    background:white;
+    border-radius:50%;
+}
+.cloud::before{width:60px;height:60px;top:-25px;left:10px;}
+.cloud::after{width:80px;height:80px;top:-35px;right:10px;}
+
+@keyframes float{
+    from{transform:translateX(-200px);}
+    to{transform:translateX(120vw);}
+}
+
+/* Header */
+header{
+    text-align:center;
+    padding:50px 20px 20px;
+}
+h1{
+    font-size:3rem;
+    color:#ff4d6d;
+    text-shadow:3px 3px 0 #fff;
+}
+.subtitle{
+    color:#1f2937;
+    font-size:1.1rem;
+    margin-top:8px;
+}
+
+/* Game Grid */
+.games{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+    padding:40px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.card{
+    background:#fff;
+    border-radius:25px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 10px 20px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+.card:hover{
+    transform:translateY(-10px) scale(1.03);
+}
+.card h2{
+    margin-bottom:10px;
+    color:#111827;
+}
+.card p{
+    color:#555;
+    font-size:14px;
+    margin-bottom:18px;
+}
+.play-btn{
+    display:inline-block;
+    padding:10px 20px;
+    border-radius:30px;
+    background:#ff4d6d;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+.play-btn:hover{
+    background:#ff2e55;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:25px;
+    color:#333;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Clouds -->
+<div class="cloud" style="width:140px;height:50px;top:60px;left:-150px;"></div>
+<div class="cloud" style="width:180px;height:60px;top:150px;left:-250px;animation-delay:10s;"></div>
+<div class="cloud" style="width:120px;height:45px;top:250px;left:-200px;animation-delay:20s;"></div>
+
+<header>
+    <h1>🎮 Aladin Game World</h1>
+    <p class="subtitle">Choose your adventure & start playing instantly!</p>
+</header>
+
+<section class="games">
+
+    <div class="card">
+        <h2>🧩 Blob Puzzle</h2>
+        <p>Solve fun puzzle challenges and sharpen your brain.</p>
+        <a class="play-btn" href="http://aladin.isroot.in/Blob%20Puzzle/">Enter Game</a>
+    </div>
+
+    <div class="card">
+        <h2>🐶 Dogelover</h2>
+        <p>Cute dog-themed game full of fun surprises.</p>
+        <a class="play-btn" href="http://aladin.isroot.in/Dogeloverhtml/">Enter Game</a>
+    </div>
+
+    <div class="card">
+        <h2>🎵 Melody Adventures</h2>
+        <p>Music, rhythm and adventure in one playful world.</p>
+        <a class="play-btn" href="http://aladin.isroot.in/Melody%20adventures/">Enter Game</a>
+    </div>
+
+    <div class="card">
+        <h2>🍉 Watermelon</h2>
+        <p>Relaxing casual gameplay with fruity fun.</p>
+        <a class="play-btn" href="http://aladin.isroot.in/Watermelon/">Enter Game</a>
+    </div>
+
+</section>
+
+<footer>
+⭐ Made with fun by Aladin Game Studio
+</footer>
+
+</body>
+</html>
